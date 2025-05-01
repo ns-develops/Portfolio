@@ -1,2 +1,2 @@
 # Portfolio
-- frame om det går med gh pages
+- frames om det går med gh pages
