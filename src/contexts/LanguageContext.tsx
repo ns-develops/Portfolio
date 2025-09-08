@@ -11,7 +11,7 @@ interface LanguageContextType {
 const translations = {
   sv: {
     // Hero
-    name: "Ditt Namn",
+    name: "Natali Samaan",
     title: "App & Web Developer",
     description: "Jag skapar moderna, responsiva webbapplikationer med passion för ren kod och användarupplevelse",
     readMore: "Läs mer om mig",
@@ -44,7 +44,7 @@ const translations = {
   },
   en: {
     // Hero
-    name: "Your Name",
+    name: "Natali Samaan",
     title: "App & Web Developer",
     description: "I create modern, responsive web applications with passion for clean code and user experience",
     readMore: "Read more about me",
