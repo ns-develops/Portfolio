@@ -13,16 +13,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      />
-      
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-hero-gradient opacity-90" />
-      
+    <section className="relative min-h-screen flex items-center justify-center bg-background">
       {/* Content */}
       <motion.div 
         className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
@@ -31,7 +22,7 @@ const Hero = () => {
         transition={{ duration: 0.8 }}
       >
         <motion.h1 
-          className="text-5xl sm:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6"
+          className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -40,7 +31,7 @@ const Hero = () => {
         </motion.h1>
         
         <motion.p 
-          className="text-xl sm:text-2xl text-primary-foreground/90 mb-2"
+          className="text-xl sm:text-2xl text-muted-foreground mb-2"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -49,7 +40,7 @@ const Hero = () => {
         </motion.p>
         
         <motion.p 
-          className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto"
+          className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -70,7 +61,7 @@ const Hero = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button size="icon" variant="outline" className="bg-white/10 border-white/20 hover:bg-white/20 text-white">
+              <Button size="icon" variant="outline" className="border-border hover:bg-accent">
                 <Icon className="h-5 w-5" />
               </Button>
             </motion.div>
@@ -88,7 +79,7 @@ const Hero = () => {
           <Button 
             onClick={scrollToAbout}
             size="lg" 
-            className="bg-white text-primary hover:bg-white/90"
+            className="bg-primary text-primary-foreground hover:bg-primary/90"
           >
             {t('readMore')}
             <ArrowDown className="ml-2 h-4 w-4" />
@@ -102,7 +93,7 @@ const Hero = () => {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
-        <ArrowDown className="h-6 w-6 text-primary-foreground/60" />
+        <ArrowDown className="h-6 w-6 text-muted-foreground" />
       </motion.div>
     </section>
   );
