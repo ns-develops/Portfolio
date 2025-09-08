@@ -62,7 +62,7 @@ const About = () => {
                       <Zap className="h-6 w-6 text-foreground" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground">Performance</h3>
+                      <h3 className="font-semibold text-foreground">Code meet solution</h3>
                       <p className="text-muted-foreground">Optimerar för hastighet</p>
                     </div>
                   </div>
