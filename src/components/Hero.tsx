@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
     aboutSection?.scrollIntoView({ behavior: 'smooth' });
@@ -33,7 +36,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Ditt Namn
+          {t('name')}
         </motion.h1>
         
         <motion.p 
@@ -42,7 +45,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Frontend Utvecklare
+          {t('title')}
         </motion.p>
         
         <motion.p 
@@ -51,7 +54,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          Jag skapar moderna, responsiva webbapplikationer med passion för ren kod och användarupplevelse
+          {t('description')}
         </motion.p>
         
         {/* Social Links */}
@@ -87,7 +90,7 @@ const Hero = () => {
             size="lg" 
             className="bg-white text-primary hover:bg-white/90"
           >
-            Läs mer om mig
+            {t('readMore')}
             <ArrowDown className="ml-2 h-4 w-4" />
           </Button>
         </motion.div>

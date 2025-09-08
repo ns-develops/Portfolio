@@ -1,8 +1,11 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Skills = () => {
+  const { t } = useLanguage();
+  
   const skillCategories = {
     frontend: [
       "VS Code", "Javascript", "React.js", "Vercel", "Bootstrap", "TypeScript", 
@@ -43,10 +46,10 @@ const Skills = () => {
             className="text-center mb-12"
           >
             <h2 className="text-4xl font-bold mb-4 text-foreground">
-              Tekniska Färdigheter
+              {t('skillsTitle')}
             </h2>
             <p className="text-xl text-muted-foreground">
-              Erfarenhet/Stack - Teknologier och verktyg jag arbetar med
+              {t('skillsSubtitle')}
             </p>
           </motion.div>
           
@@ -62,7 +65,7 @@ const Skills = () => {
               <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
                 <CardHeader>
                   <CardTitle className="text-xl font-semibold text-primary">
-                    Frontend & Webb
+                    {t('frontendTitle')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -100,7 +103,7 @@ const Skills = () => {
               <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
                 <CardHeader>
                   <CardTitle className="text-xl font-semibold text-primary">
-                    Native Utveckling
+                    {t('nativeTitle')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -138,7 +141,7 @@ const Skills = () => {
               <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
                 <CardHeader>
                   <CardTitle className="text-xl font-semibold text-primary">
-                    Backend & API:er
+                    {t('backendTitle')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -176,7 +179,7 @@ const Skills = () => {
               <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
                 <CardHeader>
                   <CardTitle className="text-xl font-semibold text-primary">
-                    UI/UX Design
+                    {t('uiuxTitle')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -214,7 +217,7 @@ const Skills = () => {
               <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
                 <CardHeader>
                   <CardTitle className="text-xl font-semibold text-primary">
-                    Verktyg
+                    {t('toolsTitle')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -252,7 +255,7 @@ const Skills = () => {
               <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
                 <CardHeader>
                   <CardTitle className="text-xl font-semibold text-primary">
-                    Specialområden
+                    {t('specialTitle')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
