@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Code, Palette, Zap } from "lucide-react";
+import { Code, Palette, Lightbulb } from "lucide-react";
 
 const About = () => {
   return (
@@ -59,7 +59,7 @@ const About = () => {
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
                     <div className="p-2 bg-foreground/10 rounded-lg">
-                      <Zap className="h-6 w-6 text-foreground" />
+                      <Lightbulb className="h-6 w-6 text-foreground" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Code meet solution</h3>
