@@ -99,7 +99,7 @@ const Projects = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Button variant="outline" size="lg" className="hover:bg-primary hover:text-primary-foreground">
+            <Button variant="outline" size="lg" className="hover:bg-foreground hover:text-background">
               <Github className="mr-2 h-4 w-4" />
               Se fler projekt på GitHub
             </Button>
