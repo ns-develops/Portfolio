@@ -16,15 +16,15 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center bg-background">
       {/* Content */}
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="grid lg:grid-cols-3 gap-12 items-center">
-          {/* Scrolling Code Text - Left Side */}
+        <div className="flex flex-col items-center space-y-8">
+          {/* Scrolling Code Text - Above Portfolio */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="order-2 lg:order-1 -ml-8 sm:-ml-12 lg:-ml-16"
+            className="flex justify-center"
           >
-            <div className="relative h-64 w-48 overflow-hidden bg-background/50 backdrop-blur-sm border border-border/50">
+            <div className="relative h-64 w-80 sm:w-96 lg:w-[500px] overflow-hidden bg-background/50 backdrop-blur-sm border border-border/50">
               <motion.div
                 className="absolute inset-0 text-xs font-mono text-muted-foreground/80 leading-relaxed p-2"
                 animate={{ y: [0, -200, 0] }}
@@ -69,9 +69,9 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Text Content - Center */}
+          {/* Text Content - Below Code */}
           <motion.div 
-            className="text-center order-1 lg:order-2 lg:col-span-2 lg:-ml-64"
+            className="text-center"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
