@@ -130,7 +130,7 @@ const Contact = () => {
                       <MapPin className="h-6 w-6 text-foreground" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground">Plats</h3>
+                      <h3 className="font-semibold text-foreground">Plats och Hybrid</h3>
                       <p className="text-muted-foreground">Stockholm, Sverige</p>
                     </div>
                   </div>
