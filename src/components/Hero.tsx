@@ -3,7 +3,6 @@ import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroBg from "@/assets/hero-bg.jpg";
-import devicesIllustration from "@/assets/devices-illustration.jpg";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -15,20 +14,6 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-background">
-      {/* Devices Image - Top Right Corner */}
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        className="absolute top-8 right-8 z-20"
-      >
-        <img 
-          src={devicesIllustration} 
-          alt="Mac and iPhone illustration" 
-          className="w-40 h-40 object-cover shadow-lg"
-        />
-      </motion.div>
-
       {/* Content */}
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-3 gap-12 items-center">
