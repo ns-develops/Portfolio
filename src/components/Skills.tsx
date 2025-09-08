@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   const skillCategories = {
@@ -34,162 +35,256 @@ const Skills = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
-            Tekniska Färdigheter
-          </h2>
-          <p className="text-xl text-muted-foreground text-center mb-12">
-            Erfarenhet/Stack - Teknologier och verktyg jag arbetar med
-          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold mb-4 text-foreground">
+              Tekniska Färdigheter
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Erfarenhet/Stack - Teknologier och verktyg jag arbetar med
+            </p>
+          </motion.div>
           
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {/* Frontend */}
-            <Card className="shadow-card hover:shadow-card-hover transition-all duration-300">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-primary">
-                  Frontend & Webb
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {skillCategories.frontend.map((skill, index) => (
-                    <Badge 
-                      key={skill} 
-                      variant="secondary" 
-                      className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
-                      style={{
-                        animationDelay: `${index * 0.05}s`,
-                        animation: 'slide-in-from-bottom 0.6s ease-out forwards'
-                      }}
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+            >
+              <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
+                <CardHeader>
+                  <CardTitle className="text-xl font-semibold text-primary">
+                    Frontend & Webb
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {skillCategories.frontend.map((skill, index) => (
+                      <motion.div
+                        key={skill}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3, delay: index * 0.05 }}
+                        viewport={{ once: true }}
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        <Badge 
+                          variant="secondary" 
+                          className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                        >
+                          {skill}
+                        </Badge>
+                      </motion.div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
 
             {/* Native */}
-            <Card className="shadow-card hover:shadow-card-hover transition-all duration-300">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-primary">
-                  Native Utveckling
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {skillCategories.native.map((skill, index) => (
-                    <Badge 
-                      key={skill} 
-                      variant="secondary" 
-                      className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
-                      style={{
-                        animationDelay: `${index * 0.05}s`,
-                        animation: 'slide-in-from-bottom 0.6s ease-out forwards'
-                      }}
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+            >
+              <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
+                <CardHeader>
+                  <CardTitle className="text-xl font-semibold text-primary">
+                    Native Utveckling
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {skillCategories.native.map((skill, index) => (
+                      <motion.div
+                        key={skill}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3, delay: index * 0.05 }}
+                        viewport={{ once: true }}
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        <Badge 
+                          variant="secondary" 
+                          className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                        >
+                          {skill}
+                        </Badge>
+                      </motion.div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
 
             {/* Backend */}
-            <Card className="shadow-card hover:shadow-card-hover transition-all duration-300">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-primary">
-                  Backend & API:er
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {skillCategories.backend.map((skill, index) => (
-                    <Badge 
-                      key={skill} 
-                      variant="secondary" 
-                      className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
-                      style={{
-                        animationDelay: `${index * 0.05}s`,
-                        animation: 'slide-in-from-bottom 0.6s ease-out forwards'
-                      }}
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+            >
+              <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
+                <CardHeader>
+                  <CardTitle className="text-xl font-semibold text-primary">
+                    Backend & API:er
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {skillCategories.backend.map((skill, index) => (
+                      <motion.div
+                        key={skill}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3, delay: index * 0.05 }}
+                        viewport={{ once: true }}
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        <Badge 
+                          variant="secondary" 
+                          className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                        >
+                          {skill}
+                        </Badge>
+                      </motion.div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
 
             {/* UI/UX Design */}
-            <Card className="shadow-card hover:shadow-card-hover transition-all duration-300">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-primary">
-                  UI/UX Design
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {skillCategories.uiux.map((skill, index) => (
-                    <Badge 
-                      key={skill} 
-                      variant="secondary" 
-                      className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
-                      style={{
-                        animationDelay: `${index * 0.05}s`,
-                        animation: 'slide-in-from-bottom 0.6s ease-out forwards'
-                      }}
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+            >
+              <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
+                <CardHeader>
+                  <CardTitle className="text-xl font-semibold text-primary">
+                    UI/UX Design
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {skillCategories.uiux.map((skill, index) => (
+                      <motion.div
+                        key={skill}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3, delay: index * 0.05 }}
+                        viewport={{ once: true }}
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        <Badge 
+                          variant="secondary" 
+                          className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                        >
+                          {skill}
+                        </Badge>
+                      </motion.div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
 
             {/* Tools */}
-            <Card className="shadow-card hover:shadow-card-hover transition-all duration-300">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-primary">
-                  Verktyg
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {skillCategories.tools.map((skill, index) => (
-                    <Badge 
-                      key={skill} 
-                      variant="secondary" 
-                      className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
-                      style={{
-                        animationDelay: `${index * 0.05}s`,
-                        animation: 'slide-in-from-bottom 0.6s ease-out forwards'
-                      }}
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+            >
+              <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
+                <CardHeader>
+                  <CardTitle className="text-xl font-semibold text-primary">
+                    Verktyg
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {skillCategories.tools.map((skill, index) => (
+                      <motion.div
+                        key={skill}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3, delay: index * 0.05 }}
+                        viewport={{ once: true }}
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        <Badge 
+                          variant="secondary" 
+                          className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                        >
+                          {skill}
+                        </Badge>
+                      </motion.div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
 
             {/* Specialområden */}
-            <Card className="shadow-card hover:shadow-card-hover transition-all duration-300">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-primary">
-                  Specialområden
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Fullstack utveckling med modern tech-stack</li>
-                  <li>• Cross-platform utveckling (Webb & Native)</li>
-                  <li>• Cloud integration & deployment</li>
-                  <li>• REST API:er & databashantering</li>
-                  <li>• UI/UX design & prototyping</li>
-                  <li>• Performance & säkerhetsoptimering</li>
-                </ul>
-              </CardContent>
-            </Card>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+            >
+              <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
+                <CardHeader>
+                  <CardTitle className="text-xl font-semibold text-primary">
+                    Specialområden
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <motion.ul 
+                    className="space-y-2 text-sm text-muted-foreground"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
+                    viewport={{ once: true }}
+                  >
+                    {[
+                      "• Fullstack utveckling med modern tech-stack",
+                      "• Cross-platform utveckling (Webb & Native)",
+                      "• Cloud integration & deployment",
+                      "• REST API:er & databashantering",
+                      "• UI/UX design & prototyping",
+                      "• Performance & säkerhetsoptimering"
+                    ].map((item, index) => (
+                      <motion.li
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                      >
+                        {item}
+                      </motion.li>
+                    ))}
+                  </motion.ul>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </div>
       </div>
