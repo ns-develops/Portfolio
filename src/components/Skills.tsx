@@ -81,7 +81,7 @@ const Skills = () => {
                       >
                         <Badge 
                           variant="secondary" 
-                          className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                          className="text-xs hover:bg-foreground hover:text-background transition-colors duration-300"
                         >
                           {skill}
                         </Badge>
@@ -119,7 +119,7 @@ const Skills = () => {
                       >
                         <Badge 
                           variant="secondary" 
-                          className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                          className="text-xs hover:bg-foreground hover:text-background transition-colors duration-300"
                         >
                           {skill}
                         </Badge>
@@ -157,7 +157,7 @@ const Skills = () => {
                       >
                         <Badge 
                           variant="secondary" 
-                          className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                          className="text-xs hover:bg-foreground hover:text-background transition-colors duration-300"
                         >
                           {skill}
                         </Badge>
@@ -195,7 +195,7 @@ const Skills = () => {
                       >
                         <Badge 
                           variant="secondary" 
-                          className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                          className="text-xs hover:bg-foreground hover:text-background transition-colors duration-300"
                         >
                           {skill}
                         </Badge>
@@ -233,7 +233,7 @@ const Skills = () => {
                       >
                         <Badge 
                           variant="secondary" 
-                          className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                          className="text-xs hover:bg-foreground hover:text-background transition-colors duration-300"
                         >
                           {skill}
                         </Badge>
