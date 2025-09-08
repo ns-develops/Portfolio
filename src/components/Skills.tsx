@@ -54,7 +54,6 @@ const Skills = () => {
           </motion.div>
           
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {/* Frontend */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -92,7 +91,6 @@ const Skills = () => {
               </Card>
             </motion.div>
 
-            {/* Native */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -130,7 +128,6 @@ const Skills = () => {
               </Card>
             </motion.div>
 
-            {/* Backend */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -168,7 +165,6 @@ const Skills = () => {
               </Card>
             </motion.div>
 
-            {/* UI/UX Design */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -244,7 +240,7 @@ const Skills = () => {
               </Card>
             </motion.div>
 
-            {/* Specialområden */}
+    
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}

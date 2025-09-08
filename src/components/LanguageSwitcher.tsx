@@ -14,20 +14,26 @@ const LanguageSwitcher = () => {
       transition={{ duration: 0.3 }}
     >
       <Globe className="h-4 w-4 text-muted-foreground" />
-      <div className="flex items-center border rounded-md">
+      <div className="flex items-center border rounded-md overflow-hidden">
         <Button
-          variant={language === 'sv' ? 'default' : 'ghost'}
           size="sm"
           onClick={() => setLanguage('sv')}
-          className="text-xs px-2 py-1 h-7 rounded-r-none border-r"
+          className={`text-xs px-2 py-1 h-7 border-r rounded-r-none transition-colors duration-200 ${
+            language === 'sv'
+              ? 'bg-black text-white hover:bg-gray-800'
+              : 'bg-transparent text-foreground hover:bg-gray-200'
+          }`}
         >
           SV
         </Button>
         <Button
-          variant={language === 'en' ? 'default' : 'ghost'}
           size="sm"
           onClick={() => setLanguage('en')}
-          className="text-xs px-2 py-1 h-7 rounded-l-none"
+          className={`text-xs px-2 py-1 h-7 rounded-l-none transition-colors duration-200 ${
+            language === 'en'
+              ? 'bg-black text-white hover:bg-gray-800'
+              : 'bg-transparent text-foreground hover:bg-gray-200'
+          }`}
         >
           EN
         </Button>

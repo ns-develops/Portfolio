@@ -16,7 +16,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
     toast({
       title: "Meddelande skickat!",
       description: "Tack för ditt meddelande. Jag återkommer så snart som möjligt.",
@@ -38,12 +37,11 @@ const Contact = () => {
           <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
             Kontakta Mig
           </h2>
-          <p className="text-xl text-muted-foreground text-center mb-12">
-            Låt oss diskutera ditt nästa projekt tillsammans
-          </p>
+         {/* <p className="text-xl text-muted-foreground text-center mb-12">
+      Låt oss diskutera ert nästa projekt tillsammans
+</p> */}
           
           <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Form */}
             <Card className="shadow-card">
               <CardHeader>
                 <CardTitle className="text-foreground">Skicka ett meddelande</CardTitle>
@@ -85,15 +83,17 @@ const Contact = () => {
                       className="w-full resize-none"
                     />
                   </div>
-                  <Button type="submit" className="w-full hover:bg-foreground hover:text-background">
-                    <Send className="mr-2 h-4 w-4" />
-                    Skicka Meddelande
-                  </Button>
+                  <Button
+  type="submit"
+  className="w-full bg-black text-white hover:bg-gray-800 hover:text-white transition-colors duration-200"
+>
+  <Send className="mr-2 h-4 w-4" />
+  Skicka Meddelande
+</Button>
                 </form>
               </CardContent>
             </Card>
             
-            {/* Contact Info */}
             <div className="space-y-6">
               <Card className="shadow-card hover:shadow-card-hover transition-all duration-300">
                 <CardContent className="p-6">
@@ -103,7 +103,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">E-post</h3>
-                      <p className="text-muted-foreground">ditt.namn@email.com</p>
+                      <p className="text-muted-foreground">natalie.samaan@live.se</p>
                     </div>
                   </div>
                 </CardContent>
@@ -117,7 +117,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Telefon</h3>
-                      <p className="text-muted-foreground">+46 70 123 45 67</p>
+                      <p className="text-muted-foreground">+46 73 965 97 23</p>
                     </div>
                   </div>
                 </CardContent>
@@ -143,7 +143,7 @@ const Contact = () => {
                 </h3>
                 <p className="text-muted-foreground mb-4">
                   Jag är alltid intresserad av spännande projekt och samarbeten. 
-                  Hör av dig så diskuterar vi hur vi kan arbeta tillsammans!
+                  Hör av dig så diskuterar vi hur vi era behov och hur vi kan arbeta tillsammans!
                 </p>
                 <div className="flex space-x-2">
                   <Button variant="outline" size="sm">

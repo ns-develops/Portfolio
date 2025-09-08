@@ -10,13 +10,14 @@ const About = () => {
             Om Mig
           </h2>
           <p className="text-xl text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-            Jag är en passionerad utvecklare som älskar att bygga digitala upplevelser
+            en passionerad utvecklare som älskar att bygga digitala upplevelser
           </p>
           
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6">
               <p className="text-lg text-foreground leading-relaxed">
-                Med över 3 års erfarenhet inom webbutveckling har jag arbetat med moderna 
+              Jag började med programmering år 2020 med att göra egna projekt som sedan resulterade till en universitetsexamen som App och webb utvecklare. 
+              Med över 5 års erfarenhet inom webb och native mobilutveckling har jag arbetat med moderna 
                 teknologier som React, TypeScript och Node.js. Jag brinner för att skapa 
                 användarvänliga applikationer som löser verkliga problem.
               </p>

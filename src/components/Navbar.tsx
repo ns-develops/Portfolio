@@ -26,7 +26,7 @@ const Navbar = () => {
   const navItems = [
     { key: "about", label: t("aboutTitle") || "Om mig", id: "about" },
     { key: "skills", label: t("skillsTitle") || "Tekniska färdigheter", id: "skills" },
-    { key: "projects", label: t("myProjects") || "Mina projekt", id: "projects" },
+    { key: "projects", label: t("Appar/Webb") || "Mina projekt", id: "projects" },
     { key: "contact", label: "Kontakta mig", id: "contact" },
   ];
 
@@ -59,12 +59,10 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Language Switcher */}
           <div className="flex items-center space-x-4">
             <LanguageSwitcher />
           </div>
 
-          {/* Mobile menu button - placeholder for future implementation */}
           <div className="md:hidden">
             <button className="text-foreground hover:text-foreground transition-colors duration-200">
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

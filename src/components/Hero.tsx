@@ -3,23 +3,22 @@ import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState, useEffect } from "react";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   const { t } = useLanguage();
-  const [isGrayscale, setIsGrayscale] = useState(false);
-  
+  const [isBlack, setIsBlack] = useState(false);
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsGrayscale(true);
+      setIsBlack(true); 
       setTimeout(() => {
-        setIsGrayscale(false);
-      }, 3000); // 3 seconds
-    }, 30000); // Every 30 seconds
+        setIsBlack(false);
+      }, 200); 
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
-  
+
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
     aboutSection?.scrollIntoView({ behavior: 'smooth' });
@@ -27,19 +26,21 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-background">
-      {/* Content */}
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="flex flex-col items-center space-y-8">
-          {/* Scrolling Code Text - Above Portfolio */}
+          
+
           <motion.div
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="flex justify-center"
           >
-            <div className={`relative h-64 w-80 sm:w-96 lg:w-[500px] overflow-hidden bg-background/50 backdrop-blur-sm border border-border/50 transition-all duration-500 ${isGrayscale ? 'grayscale' : ''}`}>
+            <div
+              className={`relative h-64 w-80 sm:w-96 lg:w-[500px] overflow-hidden border border-border/50 transition-colors duration-200 ${isBlack ? 'bg-black' : 'bg-white/90'}`}
+            >
               <motion.div
-                className="absolute inset-0 text-xs font-mono text-muted-foreground/80 leading-relaxed p-2"
+                className={`absolute inset-0 p-2 font-mono leading-relaxed transition-colors duration-200 ${isBlack ? 'text-white' : 'text-muted-foreground/80'}`}
                 animate={{ y: [0, -200, 0] }}
                 transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
               >
@@ -82,7 +83,6 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Text Content - Below Code */}
           <motion.div 
             className="text-center"
             initial={{ opacity: 0, y: 50 }}
@@ -116,7 +116,6 @@ const Hero = () => {
               {t('description')}
             </motion.p>
             
-            {/* Social Links */}
             <motion.div 
               className="flex justify-center space-x-4 mb-8"
               initial={{ opacity: 0, y: 30 }}
@@ -136,7 +135,6 @@ const Hero = () => {
               ))}
             </motion.div>
             
-            {/* CTA Button */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -156,15 +154,6 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-      
-      {/* Scroll Indicator */}
-      <motion.div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <ArrowDown className="h-6 w-6 text-muted-foreground" />
-      </motion.div>
     </section>
   );
 };

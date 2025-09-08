@@ -13,7 +13,7 @@ const translations = {
     // Hero
     name: "Portfolio",
     title: "App & Web Developer",
-    description: "Jag skapar moderna, responsiva webbapplikationer med passion för ren kod och användarupplevelse",
+    description: "moderna, responsiva webb och native applikationer med passion för lösningar, design och användarupplevelse",
     readMore: "Läs mer om mig",
     
     // About
