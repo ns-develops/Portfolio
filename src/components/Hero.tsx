@@ -2,10 +2,23 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useState, useEffect } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   const { t } = useLanguage();
+  const [isGrayscale, setIsGrayscale] = useState(false);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsGrayscale(true);
+      setTimeout(() => {
+        setIsGrayscale(false);
+      }, 3000); // 3 seconds
+    }, 30000); // Every 30 seconds
+
+    return () => clearInterval(interval);
+  }, []);
   
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
@@ -24,7 +37,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="flex justify-center"
           >
-            <div className="relative h-64 w-80 sm:w-96 lg:w-[500px] overflow-hidden bg-background/50 backdrop-blur-sm border border-border/50">
+            <div className={`relative h-64 w-80 sm:w-96 lg:w-[500px] overflow-hidden bg-background/50 backdrop-blur-sm border border-border/50 transition-all duration-500 ${isGrayscale ? 'grayscale' : ''}`}>
               <motion.div
                 className="absolute inset-0 text-xs font-mono text-muted-foreground/80 leading-relaxed p-2"
                 animate={{ y: [0, -200, 0] }}
