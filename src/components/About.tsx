@@ -30,8 +30,8 @@ const About = () => {
               <Card className="shadow-card hover:shadow-card-hover transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <Code className="h-6 w-6 text-primary" />
+                    <div className="p-2 bg-foreground/10 rounded-lg">
+                      <Code className="h-6 w-6 text-foreground" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Clean Code</h3>
@@ -44,8 +44,8 @@ const About = () => {
               <Card className="shadow-card hover:shadow-card-hover transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <Palette className="h-6 w-6 text-primary" />
+                    <div className="p-2 bg-foreground/10 rounded-lg">
+                      <Palette className="h-6 w-6 text-foreground" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Design Thinking</h3>
@@ -58,8 +58,8 @@ const About = () => {
               <Card className="shadow-card hover:shadow-card-hover transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <Zap className="h-6 w-6 text-primary" />
+                    <div className="p-2 bg-foreground/10 rounded-lg">
+                      <Zap className="h-6 w-6 text-foreground" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Performance</h3>
