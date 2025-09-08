@@ -16,17 +16,17 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center bg-background">
       {/* Content */}
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-3 gap-12 items-center">
           {/* Scrolling Code Text - Left Side */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="order-2 lg:order-1 -ml-4 sm:-ml-6 lg:-ml-8"
+            className="order-2 lg:order-1 -ml-8 sm:-ml-12 lg:-ml-16"
           >
-            <div className="relative h-96 overflow-hidden bg-background/50 backdrop-blur-sm border border-border/50">
+            <div className="relative h-64 w-48 overflow-hidden bg-background/50 backdrop-blur-sm border border-border/50">
               <motion.div
-                className="absolute inset-0 text-xs font-mono text-muted-foreground/80 leading-relaxed p-4"
+                className="absolute inset-0 text-xs font-mono text-muted-foreground/80 leading-relaxed p-2"
                 animate={{ y: [0, -200, 0] }}
                 transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
               >
@@ -69,9 +69,9 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Text Content - Right Side */}
+          {/* Text Content - Center */}
           <motion.div 
-            className="text-center lg:text-left order-1 lg:order-2"
+            className="text-center order-1 lg:order-2 lg:col-span-2"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -105,7 +105,7 @@ const Hero = () => {
             
             {/* Social Links */}
             <motion.div 
-              className="flex justify-center lg:justify-start space-x-4 mb-8"
+              className="flex justify-center space-x-4 mb-8"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
