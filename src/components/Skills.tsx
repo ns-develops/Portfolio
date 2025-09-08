@@ -64,7 +64,7 @@ const Skills = () => {
             >
               <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-primary">
+                  <CardTitle className="text-xl font-semibold text-foreground">
                     {t('frontendTitle')}
                   </CardTitle>
                 </CardHeader>
@@ -102,7 +102,7 @@ const Skills = () => {
             >
               <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-primary">
+                  <CardTitle className="text-xl font-semibold text-foreground">
                     {t('nativeTitle')}
                   </CardTitle>
                 </CardHeader>
@@ -140,7 +140,7 @@ const Skills = () => {
             >
               <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-primary">
+                  <CardTitle className="text-xl font-semibold text-foreground">
                     {t('backendTitle')}
                   </CardTitle>
                 </CardHeader>
@@ -178,7 +178,7 @@ const Skills = () => {
             >
               <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-primary">
+                  <CardTitle className="text-xl font-semibold text-foreground">
                     {t('uiuxTitle')}
                   </CardTitle>
                 </CardHeader>
@@ -216,7 +216,7 @@ const Skills = () => {
             >
               <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-primary">
+                  <CardTitle className="text-xl font-semibold text-foreground">
                     {t('toolsTitle')}
                   </CardTitle>
                 </CardHeader>
@@ -254,7 +254,7 @@ const Skills = () => {
             >
               <Card className="shadow-card hover:shadow-card-hover transition-all duration-300 h-full">
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-primary">
+                  <CardTitle className="text-xl font-semibold text-foreground">
                     {t('specialTitle')}
                   </CardTitle>
                 </CardHeader>
