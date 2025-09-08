@@ -3,7 +3,7 @@ import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroBg from "@/assets/hero-bg.jpg";
-import devicesWorkspace from "@/assets/devices-workspace.jpg";
+import devicesIllustration from "@/assets/devices-illustration.jpg";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -23,8 +23,8 @@ const Hero = () => {
         className="absolute top-8 right-8 z-20"
       >
         <img 
-          src={devicesWorkspace} 
-          alt="Mac and iPhone workspace" 
+          src={devicesIllustration} 
+          alt="Mac and iPhone illustration" 
           className="w-40 h-40 object-cover shadow-lg"
         />
       </motion.div>
