@@ -85,7 +85,7 @@ const Contact = () => {
                       className="w-full resize-none"
                     />
                   </div>
-                  <Button type="submit" className="w-full">
+                  <Button type="submit" className="w-full hover:bg-foreground hover:text-background">
                     <Send className="mr-2 h-4 w-4" />
                     Skicka Meddelande
                   </Button>
