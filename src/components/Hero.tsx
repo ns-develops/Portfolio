@@ -23,15 +23,15 @@ const Hero = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="order-2 lg:order-1"
+            className="order-2 lg:order-1 -ml-4 sm:-ml-6 lg:-ml-8"
           >
             <div className="relative">
               <img 
                 src={codePreview} 
                 alt="Code preview showing programming skills" 
-                className="rounded-lg shadow-xl w-full h-auto"
+                className="shadow-xl w-full h-auto"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
             </div>
           </motion.div>
 
