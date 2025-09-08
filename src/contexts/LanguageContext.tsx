@@ -12,7 +12,7 @@ const translations = {
   sv: {
     // Hero
     name: "Ditt Namn",
-    title: "Frontend Utvecklare",
+    title: "App & Web Developer",
     description: "Jag skapar moderna, responsiva webbapplikationer med passion för ren kod och användarupplevelse",
     readMore: "Läs mer om mig",
     
@@ -45,7 +45,7 @@ const translations = {
   en: {
     // Hero
     name: "Your Name",
-    title: "Frontend Developer",
+    title: "App & Web Developer",
     description: "I create modern, responsive web applications with passion for clean code and user experience",
     readMore: "Read more about me",
     
