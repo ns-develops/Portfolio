@@ -32,7 +32,7 @@ const translations = {
     specialTitle: "Specialområden",
     
     // Projects
-    projectsTitle: "Projekt",
+    projectsTitle: "Mina Projekt",
     projectsSubtitle: "En samling av mina senaste projekt och arbeten",
     
     // Contact
