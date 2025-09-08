@@ -1,92 +1,195 @@
-import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Skills = () => {
-  const technicalSkills = [
-    { name: "React/Next.js", level: 90 },
-    { name: "TypeScript", level: 85 },
-    { name: "Node.js", level: 80 },
-    { name: "CSS/Tailwind", level: 95 },
-    { name: "Python", level: 75 },
-    { name: "PostgreSQL", level: 70 },
-  ];
-
-  const tools = [
-    "Git", "Docker", "Figma", "VS Code", "Vite", "MongoDB", 
-    "Firebase", "AWS", "Vercel", "Prisma", "Supabase", "GraphQL"
-  ];
+  const skillCategories = {
+    frontend: [
+      "VS Code", "Javascript", "React.js", "Vercel", "Bootstrap", "TypeScript", 
+      "Next.js", "Vue.js", "React hooks", "Flexbox", "Grid", "Routes", 
+      "Tailwind CSS", "HTML5", "CSS3", "Axios", "Middleware", "Zod", 
+      "Redux", "Stripe", "WordPress", "Netlify"
+    ],
+    native: [
+      "SwiftUI", "UIKit", "AVFoundation", "CoreData", "Randomizer", 
+      "Animationer", "Egna knappar/design", "Android Studio", 
+      "Kotlin", "Java", "Javascript Native"
+    ],
+    backend: [
+      "AWS", "Azure", "MongoDB", "Firebase", "SQLite/CoreData", 
+      "Node.js + Express", "Google Cloud Console", "JWT Token", 
+      "Autentisering (Login/Signup)", "CRUD operationer", "REST API:er", 
+      "Lambda", "DynamoDB", "CloudWatch", "Öppna API-listor"
+    ],
+    uiux: [
+      "Figma prototyper", "UX/UI Design", "Material Design", "MUI", 
+      "Style components", "SVG", "React Icons", "Pexels", "Flaticon", 
+      "Canva", "Sass", "Image sliders", "Framer motion", "Hover effects"
+    ],
+    tools: [
+      "Jira", "Trello", "Husky", "Prettier", "ESLint"
+    ]
+  };
 
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
-            Färdigheter
+            Tekniska Färdigheter
           </h2>
           <p className="text-xl text-muted-foreground text-center mb-12">
-            Teknologier och verktyg jag arbetar med
+            Erfarenhet/Stack - Teknologier och verktyg jag arbetar med
           </p>
           
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Technical Skills */}
-            <div className="space-y-8">
-              <h3 className="text-2xl font-semibold text-foreground mb-6">
-                Tekniska Färdigheter
-              </h3>
-              <div className="space-y-6">
-                {technicalSkills.map((skill, index) => (
-                  <div key={skill.name} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-foreground">{skill.name}</span>
-                      <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                    </div>
-                    <Progress 
-                      value={skill.level} 
-                      className="h-2"
+          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+            {/* Frontend */}
+            <Card className="shadow-card hover:shadow-card-hover transition-all duration-300">
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold text-primary">
+                  Frontend & Webb
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {skillCategories.frontend.map((skill, index) => (
+                    <Badge 
+                      key={skill} 
+                      variant="secondary" 
+                      className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
                       style={{
-                        animationDelay: `${index * 0.2}s`,
-                        animation: 'slide-in-from-left 0.8s ease-out forwards'
+                        animationDelay: `${index * 0.05}s`,
+                        animation: 'slide-in-from-bottom 0.6s ease-out forwards'
                       }}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            {/* Tools & Technologies */}
-            <div className="space-y-8">
-              <h3 className="text-2xl font-semibold text-foreground mb-6">
-                Verktyg & Teknologier
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {tools.map((tool, index) => (
-                  <Badge 
-                    key={tool} 
-                    variant="secondary" 
-                    className="px-4 py-2 text-sm hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
-                    style={{
-                      animationDelay: `${index * 0.1}s`,
-                      animation: 'slide-in-from-bottom 0.6s ease-out forwards'
-                    }}
-                  >
-                    {tool}
-                  </Badge>
-                ))}
-              </div>
-              
-              <div className="mt-8 p-6 bg-accent/50 rounded-lg border">
-                <h4 className="font-semibold text-foreground mb-3">
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Native */}
+            <Card className="shadow-card hover:shadow-card-hover transition-all duration-300">
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold text-primary">
+                  Native Utveckling
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {skillCategories.native.map((skill, index) => (
+                    <Badge 
+                      key={skill} 
+                      variant="secondary" 
+                      className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                      style={{
+                        animationDelay: `${index * 0.05}s`,
+                        animation: 'slide-in-from-bottom 0.6s ease-out forwards'
+                      }}
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Backend */}
+            <Card className="shadow-card hover:shadow-card-hover transition-all duration-300">
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold text-primary">
+                  Backend & API:er
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {skillCategories.backend.map((skill, index) => (
+                    <Badge 
+                      key={skill} 
+                      variant="secondary" 
+                      className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                      style={{
+                        animationDelay: `${index * 0.05}s`,
+                        animation: 'slide-in-from-bottom 0.6s ease-out forwards'
+                      }}
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* UI/UX Design */}
+            <Card className="shadow-card hover:shadow-card-hover transition-all duration-300">
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold text-primary">
+                  UI/UX Design
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {skillCategories.uiux.map((skill, index) => (
+                    <Badge 
+                      key={skill} 
+                      variant="secondary" 
+                      className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                      style={{
+                        animationDelay: `${index * 0.05}s`,
+                        animation: 'slide-in-from-bottom 0.6s ease-out forwards'
+                      }}
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Tools */}
+            <Card className="shadow-card hover:shadow-card-hover transition-all duration-300">
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold text-primary">
+                  Verktyg
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {skillCategories.tools.map((skill, index) => (
+                    <Badge 
+                      key={skill} 
+                      variant="secondary" 
+                      className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                      style={{
+                        animationDelay: `${index * 0.05}s`,
+                        animation: 'slide-in-from-bottom 0.6s ease-out forwards'
+                      }}
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Specialområden */}
+            <Card className="shadow-card hover:shadow-card-hover transition-all duration-300">
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold text-primary">
                   Specialområden
-                </h4>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• Frontend utveckling med React & TypeScript</li>
-                  <li>• Responsiv design & mobil-först approach</li>
-                  <li>• REST API & GraphQL integration</li>
-                  <li>• Performance optimering</li>
-                  <li>• UI/UX implementering</li>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Fullstack utveckling med modern tech-stack</li>
+                  <li>• Cross-platform utveckling (Webb & Native)</li>
+                  <li>• Cloud integration & deployment</li>
+                  <li>• REST API:er & databashantering</li>
+                  <li>• UI/UX design & prototyping</li>
+                  <li>• Performance & säkerhetsoptimering</li>
                 </ul>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
