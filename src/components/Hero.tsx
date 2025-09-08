@@ -3,7 +3,6 @@ import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroBg from "@/assets/hero-bg.jpg";
-import codePreview from "@/assets/code-preview.jpg";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -18,20 +17,55 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Code Preview Image - Left Side */}
+          {/* Scrolling Code Text - Left Side */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="order-2 lg:order-1 -ml-4 sm:-ml-6 lg:-ml-8"
           >
-            <div className="relative">
-              <img 
-                src={codePreview} 
-                alt="Code preview showing programming skills" 
-                className="shadow-xl w-full h-auto"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
+            <div className="relative h-96 overflow-hidden bg-background/50 backdrop-blur-sm border border-border/50">
+              <motion.div
+                className="absolute inset-0 text-xs font-mono text-muted-foreground/80 leading-relaxed p-4"
+                animate={{ y: [0, -200, 0] }}
+                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+              >
+                <div className="space-y-1">
+                  <div>const App = () =&gt; &#123;</div>
+                  <div>  const [data, setData] = useState([]);</div>
+                  <div>  const [loading, setLoading] = useState(false);</div>
+                  <div></div>
+                  <div>  useEffect(() =&gt; &#123;</div>
+                  <div>    fetchData();</div>
+                  <div>  &#125;, []);</div>
+                  <div></div>
+                  <div>  const fetchData = async () =&gt; &#123;</div>
+                  <div>    setLoading(true);</div>
+                  <div>    try &#123;</div>
+                  <div>      const response = await api.get(&quot;/data&quot;);</div>
+                  <div>      setData(response.data);</div>
+                  <div>    &#125; catch (error) &#123;</div>
+                  <div>      console.error(&quot;Error:&quot;, error);</div>
+                  <div>    &#125; finally &#123;</div>
+                  <div>      setLoading(false);</div>
+                  <div>    &#125;</div>
+                  <div>  &#125;;</div>
+                  <div></div>
+                  <div>  return (</div>
+                  <div>    &lt;div className=&quot;app&quot;&gt;</div>
+                  <div>      &lt;Header /&gt;</div>
+                  <div>      &#123;loading ? (</div>
+                  <div>        &lt;Spinner /&gt;</div>
+                  <div>      ) : (</div>
+                  <div>        &lt;DataList data=&#123;data&#125; /&gt;</div>
+                  <div>      )&#125;</div>
+                  <div>    &lt;/div&gt;</div>
+                  <div>  );</div>
+                  <div>&#125;;</div>
+                  <div></div>
+                  <div>export default App;</div>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
 
