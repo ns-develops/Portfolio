@@ -79,7 +79,7 @@ const Hero = () => {
           <Button 
             onClick={scrollToAbout}
             size="lg" 
-            className="bg-primary text-primary-foreground hover:bg-primary/90"
+            className="bg-foreground text-background hover:bg-foreground/90"
           >
             {t('readMore')}
             <ArrowDown className="ml-2 h-4 w-4" />
