@@ -9,7 +9,7 @@ const Projects = () => {
     {
       title: "E-commerce Platform",
       description: "En fullstack e-commerce lösning byggd med React, Node.js och PostgreSQL. Inkluderar användarautentisering, produkthantering och säker betalning.",
-      image: "/ecommerce.jpg",
+      image: `${import.meta.env.BASE_URL}ecommerce.jpg`,
       technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
       liveUrl: "#",
       githubUrl: "#"
@@ -17,7 +17,7 @@ const Projects = () => {
     {
       title: "Projekthanterings App End-to-End",
       description: "En kollaborativ projekthanteringsapp med realtidsuppdateringar, kanban-board och teammedlemsinbjudningar.",
-      image: "/project.jpg", 
+      image: `${import.meta.env.BASE_URL}project.jpg`,
       technologies: ["Next.js", "TypeScript", "Prisma", "WebSocket", "Supabase", "Docker"],
       liveUrl: "#",
       githubUrl: "#"
@@ -25,7 +25,7 @@ const Projects = () => {
     {
       title: "Dogcare checkin App",
       description: "Smart incheckningssystem gör avlämning och upphämtning smidig, för både personal och husdjursägare.",
-      image: "/dogcare1.jpg", 
+      image: `${import.meta.env.BASE_URL}dogcare1.jpg`,
       technologies: ["React", "TypeScript", "MongoDB, Express, React, Node.js", "CSS3"],
       liveUrl: "#",
       githubUrl: "#"
@@ -33,7 +33,7 @@ const Projects = () => {
     {
       title: "AI Chat Bot",
       description: "En intelligent chatbot med naturlig språkförståelse, byggd med modern AI-teknik och elegant användargränssnitt.",
-      image: "/ai.jpg", 
+      image: `${import.meta.env.BASE_URL}ai.jpg`,
       technologies: ["React", "OpenAI API", "FastAPI"],
       liveUrl: "#",
       githubUrl: "#"
