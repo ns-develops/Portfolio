@@ -71,7 +71,7 @@ const Hero = () => {
 
           {/* Text Content - Center */}
           <motion.div 
-            className="text-center order-1 lg:order-2 lg:col-span-2"
+            className="text-center order-1 lg:order-2 lg:col-span-2 lg:-ml-12"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
