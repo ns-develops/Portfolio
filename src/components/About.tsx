@@ -64,7 +64,7 @@ const About = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Code meet solution</h3>
-                      <p className="text-muted-foreground">Optimerar för hastighet</p>
+                      <p className="text-muted-foreground">Skapar nytt, optimerar, omformar, addera funktioner i befintlig kod</p>
                     </div>
                   </div>
                 </CardContent>
